@@ -53,15 +53,15 @@ namespace Visitor
         std::string value;
 
     public:
-        void visit(Foo &ref) override {
+        void visit([[maybe_unused]] Foo &ref) override {
             value = "Foo";
         }
 
-        void visit(Bar &ref) override {
+        void visit([[maybe_unused]] Bar &ref) override {
             value = "Bar";
         }
 
-        void visit(Baz &ref) override{
+        void visit([[maybe_unused]] Baz &ref) override{
             value = "Baz";
         }
     };

@@ -15,7 +15,7 @@ namespace RAII
 {
     struct resource
     {
-        resource(int x, int y) {
+        resource(int, int) {
             std::cout << "resource acquired\n";
         }
 

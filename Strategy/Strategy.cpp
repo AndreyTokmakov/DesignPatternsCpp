@@ -238,9 +238,12 @@ namespace Strategy::Strategy_Text
 
     struct ListStrategy
     {
-        virtual void add_list_item(std::ostringstream& oss, const std::string& item) { };
-        virtual void start(std::ostringstream& oss) { };
-        virtual void end(std::ostringstream& oss) { };
+        virtual void add_list_item([[maybe_unused]] std::ostringstream& oss,
+                                   [[maybe_unused]] const std::string& item) { };
+
+        virtual void start([[maybe_unused]] std::ostringstream& oss) { };
+
+        virtual void end([[maybe_unused]] std::ostringstream& oss) { };
 
         virtual ~ListStrategy() = default;
     };

@@ -266,6 +266,7 @@ namespace Observer::Parsons
     {
         void set_age(uint8_t age)
         {
+            [[maybe_unused]]
             const bool old_can_vote = get_can_vote();
             this->m_age = age;
 

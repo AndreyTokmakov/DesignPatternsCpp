@@ -35,7 +35,7 @@ namespace Builder {
         }
 
         [[nodiscard]]
-        std::string toString(int indent = 0) const noexcept {
+        std::string toString([[maybe_unused]] int indent = 0) const noexcept {
             std::string block {"<" + name + ">"};
             if (text.empty())
                 for (const auto& element: elements)

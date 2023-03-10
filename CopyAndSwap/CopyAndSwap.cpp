@@ -112,32 +112,32 @@ namespace CopyAndSwap {
 namespace CopyAndSwap::Tests {
 
     void Test() {
-        Array<int> numbers {3};
+        Array<uint32_t> numbers {3};
         std::iota(numbers.Data(), numbers.Data() + numbers.Size(), 1);
 
-        for (int i = 0; i < numbers.Size(); ++i) {
+        for (uint32_t i = 0; i < numbers.Size(); ++i) {
             std::cout << numbers[i] << std::endl;
         }
 
         std::cout << "--------------------------------------------\n";
 
-        Array<int> numbers1 (numbers);
-        for (int i = 0; i < numbers1.Size(); ++i) {
+        Array<uint32_t> numbers1 (numbers);
+        for (uint32_t i = 0; i < numbers1.Size(); ++i) {
             std::cout << numbers1[i] << std::endl;
         }
 
         std::cout << "--------------------------------------------\n";
 
-        Array<int> numbers2(3);
+        Array<uint32_t> numbers2(3);
         numbers2 = numbers1;
-        for (int i = 0; i < numbers2.Size(); ++i) {
+        for (uint32_t i = 0; i < numbers2.Size(); ++i) {
             std::cout << numbers2[i] << std::endl;
         }
 
         std::cout << "--------------------------------------------\n";
 
         numbers2 = numbers2;
-        for (int i = 0; i < numbers2.Size(); ++i) {
+        for (uint32_t i = 0; i < numbers2.Size(); ++i) {
             std::cout << numbers2[i] << std::endl;
         }
     }
